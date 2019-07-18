@@ -1,8 +1,8 @@
 # git-stashout
 
-A custom git command to automatically manage a per-branch stash so you can
-easily switch between branches without having to either make WIP commits every
-time or manually stash and pop your changes.
+A custom `git checkout` command to automatically manage a per-branch stash so you
+can easily switch between branches without having to either make WIP commits
+every time or manually stash and pop your changes.
 
 If you often find yourself working on multiple branches and switching between
 them, you might be familiar with a workflow such as:
