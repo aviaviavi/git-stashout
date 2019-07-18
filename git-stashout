@@ -1,0 +1,30 @@
+#!/bin/bash
+
+function git_auto_stash_with_name() {
+    git stash save "autostash_$1"
+}
+
+function git_autostash_apply() {
+    stash_index="$(git stash list | grep "autostash_$1" | cut -d: -f1)"
+    if [ -n "$stash_index" ]; then
+        git stash pop
+    fi
+}
+
+function current_git_branch() {
+    git branch | grep \* | cut -d ' ' -f2
+}
+
+function stashout() {
+    if [ -n "$1" ]; then
+        current_branch="$(current_git_branch)"
+        git_auto_stash_with_name "$current_branch"
+        git checkout "$1"
+        git_autostash_apply "$1"
+    else
+        echo "Usage: git stashout <branch>"
+        exit 1
+    fi
+}
+
+stashout "$1"
