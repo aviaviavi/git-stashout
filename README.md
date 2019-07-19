@@ -30,5 +30,4 @@ $ git stashout <branch>
 
 This will stash your current changes, and checkout `<branch>`. If `<branch>` had
 a previous stash from `stashout`, it will be popped off the stash list so you
-can resume your progress. Now you have easy task switching without needing to
-amend your WIP commits!
+can resume your progress. Now you have easy task switching without needing to clean up your WIP commits!
