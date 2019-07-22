@@ -7,7 +7,7 @@ function git_auto_stash_with_name() {
 function git_autostash_apply() {
     stash_index="$(git stash list | grep "autostash_$1" | cut -d: -f1)"
     if [ -n "$stash_index" ]; then
-        git stash pop
+        git stash pop "$stash_index"
     fi
 }
 
