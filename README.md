@@ -18,14 +18,6 @@ If this workflow sounds familiar to you, it's where `git-stashout` shines!
 
 ## Installing
 
-#### With [Scarf](https://scarf.sh/package/avi/git-stashout)
-
-```shell
-scarf install git-stashout
-```
-
-#### Manually
-
 1. Put `git-stashout` somewhere in your `PATH`
 2. [Optional] Source `git-stashout-completion` to get branch completion when
    typing the branch name
